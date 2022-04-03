@@ -221,8 +221,16 @@ namespace Demo_OnPremConsole_ToCosmos
         /// </summary>
         private async Task QueryItemsAsync()
         {
-            //var sqlQueryText = "SELECT * FROM c WHERE c.PartitionKey = 'Andersen'";
-            var sqlQueryText = "SELECT * FROM c";
+            Console.WriteLine("Enter NPI number to search for \n");
+
+            var NPI = Console.ReadLine();
+            if (string.IsNullOrEmpty(NPI))
+            { NPI = "1669475711"; }
+            else if (NPI.Length != 10)
+            { NPI = "1669475711"; }
+
+
+            var sqlQueryText =  "SELECT * FROM c where c.NPI = '" + NPI + "'";
 
             Console.WriteLine("Running query: {0}\n", sqlQueryText);
 
