@@ -9,8 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ADO.Net-DataAccessLayer\ADODataAccess.csproj" />
-    <ProjectReference Include="..\DemoEntityAndDTO\DemoEntityAndDTO.csproj" />
+    <ProjectReference Include="..\01Ref_ADO.Net-DataAccessLayer\01Ref_ADODataAccess.csproj" />
+    <ProjectReference Include="..\01Ref_DemoEntityAndDTO\01Ref_DemoEntityAndDTO.csproj" />
   </ItemGroup>
 
 
