@@ -6,22 +6,23 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using DemoProviderAccessAPI.Entitiy;
 using System.Data;
+using DemoEntityAndDTO;
 
 namespace DemoProviderAccessAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProviderController : ControllerBase
+    public class MintTeaAZURESQLProviderController : ControllerBase
     {
 
         private static readonly string sqlConnectionString = "Server=tcp:sqldbservervinayak.database.windows.net,1433;Initial Catalog=kagglecmsdata;Persist Security Info=False;User ID=demoadmin1;Password=DemoPassword1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
         // GET: api/Provider
         [HttpGet]
-        public IEnumerable<Provider> Get()
+        public IEnumerable<MintTeaAZURESQLProvider> Get()
         {
             //return new Provider[]; { new Provider(), new Provider() };
-            var ProviderList = new List<Provider>();
+            var ProviderList = new List<MintTeaAZURESQLProvider>();
 
             DataTable dt = new DataTable();
             var objADO = new ADODataAccess.SqlDataAccessLayer(sqlConnectionString);
@@ -32,7 +33,7 @@ namespace DemoProviderAccessAPI.Controllers
 
             foreach (DataRow dr in dt.Rows)
             {
-                var p = new Provider();
+                var p = new MintTeaAZURESQLProvider();
                 p.ProviderFirstName = dr[0].ToString();
                 p.ProviderLastName = dr[1].ToString();
                 ProviderList.Add(p);
@@ -42,9 +43,9 @@ namespace DemoProviderAccessAPI.Controllers
 
         // GET: api/Provider/5
         [HttpGet("{id}", Name = "Get")]
-        public Provider Get(int id)
+        public MintTeaAZURESQLProvider Get(int id)
         {
-            return new Provider();
+            return new MintTeaAZURESQLProvider();
         }
 
         //// POST: api/Provider

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace Demo_OnPremConsole_ToCosmos
+namespace DemoEntityAndDTO
 {
     public class Family
     {

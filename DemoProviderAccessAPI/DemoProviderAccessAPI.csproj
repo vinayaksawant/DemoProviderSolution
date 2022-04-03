@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ADO.Net-DataAccessLayer\ADODataAccess.csproj" />
+    <ProjectReference Include="..\DemoEntityAndDTO\DemoEntityAndDTO.csproj" />
   </ItemGroup>
 
 
