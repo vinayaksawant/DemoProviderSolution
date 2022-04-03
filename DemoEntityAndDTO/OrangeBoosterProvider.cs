@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Demo_OnPremConsole_ToCosmos
+namespace DemoEntityAndDTO
 {
     public class OrangeBoosterProvider
         {

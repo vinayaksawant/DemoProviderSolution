@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace DemoProviderAccessAPI.Entitiy
 {
-    public class Provider
+    public class MintTeaAZURESQLProvider
     {
         public string ProviderFirstName { get; set; }
 

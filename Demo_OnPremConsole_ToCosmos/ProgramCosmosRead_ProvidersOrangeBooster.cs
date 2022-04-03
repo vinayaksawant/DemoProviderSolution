@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Collections.Generic;
 using System.Net;
 using Microsoft.Azure.Cosmos;
+using DemoEntityAndDTO;
 
 namespace Demo_OnPremConsole_ToCosmos
 {
